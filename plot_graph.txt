@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+
+# Input sizes
+input_sizes = [5, 10, 50, 100]
+
+# Corresponding average times (fill your values)
+average_times = [
+    0.0000018440,  # for 5 elements
+    0.0000014540,  # for 10 elements
+    0.0000049120,  # for 50 elements
+    0.0000094040   # for 100 elements
+]
+
+# Create the plot
+plt.plot(input_sizes, average_times, marker='o', linestyle='-', color='b')
+
+# Add titles and labels
+plt.title('Input Size vs Average Execution Time (Insertion Sort)')
+plt.xlabel('Input Size (N)')
+plt.ylabel('Average Time (seconds)')
+
+# Show grid
+plt.grid(True)
+
+# Optionally: Save the graph as an image
+plt.savefig('insertion_sort_graph.png')
+
+# Show the graph
+plt.show()
